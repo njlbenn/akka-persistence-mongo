@@ -68,7 +68,7 @@ val commonSettings = Seq(
     "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
     "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
   ),
-  parallelExecution in Test := false,
+  parallelExecution in Test := true,
   testOptions in Test += Tests.Argument("-oDS"),
   testOptions in Travis += Tests.Argument("-l", "org.scalatest.tags.Slow")
 ) ++ inConfig(Travis)(Defaults.testTasks)
